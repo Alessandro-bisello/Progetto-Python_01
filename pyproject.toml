@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-rinomina"
+version = "1.0.0"
+description = "Copia i PDF in una sottocartella rinominandoli con i dati letti dal documento."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pypdf>=5.1"]
+
+[project.scripts]
+rinomina-pdf = "pdf_rinomina.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["pdf_rinomina*"]
+
+[tool.setuptools.package-data]
+pdf_rinomina = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
