@@ -1,0 +1,29 @@
+{
+  "codifiche": [
+    {
+      "nome": "Fattura",
+      "codice": "FATTURA",
+      "codice_esatto": true,
+      "campi": [
+        {"nome": "numero", "tipo": "etichetta", "regola": "Numero"},
+        {"nome": "data", "tipo": "etichetta", "regola": "Data"},
+        {"nome": "cliente", "tipo": "etichetta", "regola": "Cliente"}
+      ],
+      "modello_nome": "{numero}_{cliente}_{data}",
+      "sottocartella": "fatture",
+      "spazi_underscore": true
+    },
+    {
+      "nome": "Documento",
+      "codice": "",
+      "codice_esatto": true,
+      "campi": [
+        {"nome": "codice", "tipo": "etichetta", "regola": "Codice"},
+        {"nome": "data", "tipo": "etichetta", "regola": "Data"}
+      ],
+      "modello_nome": "{codice}_{data}",
+      "sottocartella": "rinominati",
+      "spazi_underscore": false
+    }
+  ]
+}
